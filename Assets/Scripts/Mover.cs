@@ -5,7 +5,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class Mover : MonoBehaviour
 {
     [SerializeField]
-    float moveSpeed = 1f;
+    float moveSpeed = 10f;
 
     void Start()
     {
