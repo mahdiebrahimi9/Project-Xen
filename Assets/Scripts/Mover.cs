@@ -1,16 +1,23 @@
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Mover : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    float moveSpeed = 1f;
+
     void Start()
     {
-     
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(0.01f, 0f, 0f);
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float yValue = 0f;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+
+        transform.Translate(xValue, yValue, zValue);
     }
 }
