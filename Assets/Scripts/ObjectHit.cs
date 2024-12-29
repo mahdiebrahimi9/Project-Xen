@@ -6,6 +6,6 @@ public class ObjectHit : MonoBehaviour
     {
         GetComponent<MeshRenderer>().material.color = Color.yellow;
             
-        Debug.Log("Opss Hit Me!");
+        //Debug.Log("Opss Hit Me!");
     }
 }
