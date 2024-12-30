@@ -8,7 +8,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] GameObject projectTile3;
     [SerializeField] GameObject projectTile4;
 
-   
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -18,7 +18,9 @@ public class Trigger : MonoBehaviour
             projectTile2.SetActive(true);
             projectTile3.SetActive(true);
             projectTile4.SetActive(true);
+
+            Destroy(gameObject);
         }
     }
- 
+
 }
